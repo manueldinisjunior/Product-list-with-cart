@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <title>Project | Product list with cart</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" type="module"></script>
+    <!-- Style 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(227, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="red-hat-text-400">
+    <main>
+      <div>
+        <div class="cards">
+          <h1 class="cards-heading">Desserts</h1>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-waffle-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-waffle-tablet.jpg" />
+                <img
+                  src="./assets/images/image-waffle-mobile.jpg"
+                  alt=" waffles with strawberries on top" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Waffle</p>
+            <h2 class="card-title red-hat-text-700">Waffle with Berries</h2>
+            <p class="red-hat-text-700 card-price">
+              $
+              <span>6.30</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-creme-brulee-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-creme-brulee-tablet.jpg" />
+                <img
+                  src="./assets/images/image-creme-brulee-mobile.jpg"
+                  alt=" two deserts with spoons on a dish" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Crème Brûlée</p>
+            <h2 class="card-title red-hat-text-700">
+              Vanilla Bean Crème Brûlée
+            </h2>
+            <p class="red-hat-text-700 card-price">
+              $
+              <span>7.00</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-macaron-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-macaron-tablet.jpg" />
+                <img
+                  src="./assets/images/image-macaron-mobile.jpg"
+                  alt="5 macarons with associated colors" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Macaron</p>
+            <h2 class="card-title red-hat-text-700">Macaron Mix of Five</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>8.00</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-tiramisu-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-tiramisu-tablet.jpg" />
+                <img
+                  src="./assets/images/image-tiramisu-mobile.jpg"
+                  alt="Tiramisu on a plate" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Tiramisu</p>
+            <h2 class="card-title red-hat-text-700">Classic Tiramisu</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>5.50</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-baklava-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-baklava-tablet.jpg" />
+                <img
+                  src="./assets/images/image-baklava-mobile.jpg"
+                  alt="3 Baklava on a plate" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Baklava</p>
+            <h2 class="card-title red-hat-text-700">Pistachio Baklava</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>4.00</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-meringue-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-meringue-tablet.jpg" />
+                <img
+                  src="./assets/images/image-meringue-mobile.jpg"
+                  alt="Tiramisu on a plate" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Pie</p>
+            <h2 class="card-title red-hat-text-700">Lemon Meringue Pie</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>5.00</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-cake-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-cake-tablet.jpg" />
+                <img
+                  src="./assets/images/image-cake-mobile.jpg"
+                  alt="Tiramisu on a plate" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Cake</p>
+            <h2 class="card-title red-hat-text-700">Red Velvet Cake</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>4.50</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-brownie-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-brownie-tablet.jpg" />
+                <img
+                  src="./assets/images/image-brownie-mobile.jpg"
+                  alt="Brownie with Vanilla ice cream  on a plate" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Brownie</p>
+            <h2 class="card-title red-hat-text-700">Salted Caramel Brownie</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>4.50</span>
+            </p>
+          </div>
+          <div class="card">
+            <div class="img-container">
+              <picture>
+                <source
+                  media="(min-width: 50rem )"
+                  srcset="./assets/images/image-panna-cotta-desktop.jpg" />
+                <source
+                  media="(min-width: 30rem )"
+                  srcset="./assets/images/image-panna-cotta-tablet.jpg" />
+                <img
+                  src="./assets/images/image-panna-cotta-mobile.jpg"
+                  alt="2 Panna Cotta with spoon" />
+              </picture>
+              <button class="add-cart-container red-hat-text-600" value="1">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt="shopping cart with plus sign on top" />
+                Add to Cart
+              </button>
+              <button class="add-cart-counter hide red-hat-text-600">
+                <span tabindex="0" class="minus" data-amount="-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="2"
+                    fill="none"
+                    viewBox="0 0 10 2">
+                    <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                  </svg>
+                </span>
+                <span class="amount">1</span>
+                <span tabindex="0" class="plus" data-amount="1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    fill="none"
+                    viewBox="0 0 9 10">
+                    <path
+                      fill="#fff"
+                      d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <p class="category red-hat-text-600">Panna Cotta</p>
+            <h2 class="card-title red-hat-text-700">Vanilla Panna Cotta</h2>
+            <p class="card-price red-hat-text-700">
+              $
+              <span>6.50</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-container">
+        <p class="cart-amount red-hat-text-700">
+          Cart
+          <span data-total-items="0">(0)</span>
+        </p>
+        <div class="cart-message">
+          <img
+            src="./assets/images/illustration-empty-cart.svg"
+            alt="a cake with one slice seperated from the cake" />
+          <p class="cart-message red-hat-text-700">
+            Added items will appear here
+          </p>
+        </div>
+        <div class="order-list-container hide">
+          <ul class="order-list"></ul>
+          <div class="order-total-container red-hat-text-600">
+            <p>Order Total</p>
+            <h3 id="order-total">$00.00</h3>
+          </div>
+          <div class="carbon-container">
+            <img
+              src="./assets/images/icon-carbon-neutral.svg"
+              alt="green tree" />
+            <p class="red-hat-text-400">
+              This is a
+              <span class="red-hat-text-700">carbon-neutral</span>
+              delivery
+            </p>
+          </div>
+          <button class="confirm-btn red-hat-text-600">Confirm Order</button>
+        </div>
+      </div>
+      <dialog id="order-confirmation">
+        <img
+          src="./assets/images/icon-order-confirmed.svg"
+          alt="checkmark in circle" />
+        <h3 class="confirmation-main-head">Order Confirmed</h3>
+        <p class="confirmation-subhead red-hat-text-600">
+          We hope you enjoy your food!
+        </p>
+        <div>
+          <ul class="confirm-order-list"></ul>
+          <div class="confirm-order-total">
+            <p class="red-hat-text-700">Order Total</p>
+            <h3 class="confirm-order-number">$00.00</h3>
+          </div>
+        </div>
+        <button class="confirm-btn red-hat-text-600">Start New Order</button>
+      </dialog>
+    </main>
+  </body>
+</html>
